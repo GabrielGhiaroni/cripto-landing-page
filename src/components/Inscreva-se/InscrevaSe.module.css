@@ -1,0 +1,95 @@
+section>div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1rem;
+}
+
+.inscrevaSe__left {
+    text-align: center;
+}
+
+.inscrevaSe__left img {
+    width: 50%;
+}
+
+.inscrevaSe__left img:hover {
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+}
+
+.inscrevaSe__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inscrevaSe__right p {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.inscrevaSe__right h2 {
+    width: 20ch;
+    text-align: center;
+}
+
+/* ======= MEDIUM DEVICES  ======= */
+@media screen and (max-width: 1024px) {
+    section>div {
+        grid-template-columns: 1fr;
+    }
+
+    .inscrevaSe__right h2 {
+        margin-top: 2rem;
+        font-size: 2rem;
+    }
+
+    .inscrevaSe__right__inputContainer {
+        display: flex;
+        /* flex-direction: column; */
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .inscrevaSe__right__inputContainer input::placeholder {
+        font-size: 1rem;
+    }
+
+    .inscrevaSe__right__inputContainer input,
+    .inscrevaSe__right__inputContainer button {
+        max-width: 80%;
+    }
+}
+
+/* ======= SMALL DEVICES  ======= */
+@media screen and (max-width: 480px) {
+    section>div {
+        grid-template-columns: 1fr;
+    }
+
+    .inscrevaSe__right p {
+        font-size: 1rem;
+    }
+
+    .inscrevaSe__right h2 {
+        max-width: 30ch;
+        font-size: 1.5rem;
+    }
+
+    .inscrevaSe__right__inputContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .inscrevaSe__right__inputContainer input,
+    .inscrevaSe__right__inputContainer button {
+        max-width: 100%;
+    }
+
+}
