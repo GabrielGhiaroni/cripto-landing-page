@@ -7,19 +7,19 @@ const Navbar = () => {
     return (
             <header>
                 <div className={styles.container}>
-                    <h1>De<span className='primary'>Fi</span></h1>
+                    <a href="#hero"><h1>De<span className='primary'>Fi</span></h1></a>
                     <ul className={mobile ? [styles.navMenu, styles.ativo].join(' ') : styles.navMenu}>
                         <li>
-                            <a href="#hero">Home</a>
+                            <a href="#hero" onClick={() => setMobile(!mobile)}>Home</a>
                         </li>
                         <li>
-                            <a href="#destaque">Destaque</a>
+                            <a href="#destaque" onClick={() => setMobile(!mobile)}>Destaque</a>
                         </li>
                         <li>
-                            <a href="/">Ganhe</a>
+                            <a href="#inscrevaSe" onClick={() => setMobile(!mobile)}>Inscreva-se</a>
                         </li>
                         <li>
-                            <a href="/">Contato</a>
+                            <a href="#footer" onClick={() => setMobile(!mobile)}>Contato</a>
                         </li>
                     </ul>
                     <div className={styles.btnGroup}>
